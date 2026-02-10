@@ -31,7 +31,7 @@ if ingredients_list:
 
     #st.write(ingredients_string)
 
-conn = st.connection("snowflake")
+    conn = st.connection("snowflake")
   
     my_insert_stmt = conn.query(""" insert into smoothies.public.orders(ingredients,name_on_order)
             values ('""" + ingredients_string +"""','"""+name_on_order+ """')""")
